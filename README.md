@@ -1,2 +1,2 @@
 # Mi-primera-pagina-en-HTML
-Poco útil, pero sirve (HTML, CSS
+Poco útil, pero sirve (HTML, CSS, JS)
