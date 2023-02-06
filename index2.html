@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title> Segunda sesion de clase</title>
+	</head>
+	<body>
+		<h1>1. Botones de acciones y mensajes</h1>
+		<button>Botón Básico</button>
+		<br><br>
+
+		<button onclick="accion_1()" id="Bt1"> Boton 1</button> <br>
+		<button onclick="accion_2()" id="Bt2"> Boton 2</button> <br> <br>
+		<button onclick="accion_3()" id="Bt3"> Boton 3</button> <br> <br> <br>
+
+		<h2>2. Despliegue de datos</h1>
+
+		<p> Hola, a continuación le solicitamos algunos datos personales, espero nos pueda colaborar: </p> 
+		<br>
+
+		Primer nombre: <input type="text" name="Recibir texto 1" id="Tx_1">
+
+		Segundo nombre: <input type="text" name="Recibir texto 2" id="Tx_2"> 
+
+		<br> <br>
+
+		<p> Primer apellido: <input type="text" name="Recibir texto 3" id="Tx_3"></p>
+		<p> Segundo apellido: <input type="text" name="Recibir texto 4" id="Tx_4"></p>
+
+		<button onclick="accion_4()" id="Bt4"> CONCATENAR </button> 
+		<br> <br>
+
+		<!-- &nbsp ????? !-->
+		Nombres: &nbsp;<output id="Out1"></output> y Apellidos: &nbsp;<output id="Out2"></output>
+
+
+
+		<style type="text/css">
+
+			/* Esto es un comentario en CSS y no hace parte funcional del código */
+				body
+				{
+					background-image: url(matriz.jpg);
+					background-repeat: round;
+					color: rgb(0, 0, 255);
+				}
+				h1
+				{
+					/* rgba, la a significa el brillo, de 0 a 1.0 */
+					color: rgba(255, 255, 255, 1.0);
+
+				}
+				h2
+				{
+					color: rgba(0, 255, 0, 1.0);
+				}
+
+				#Out1{color: rgba(66, 43, 233, 1.0);}
+				#Out2{color: rgba(255, 0, 0, 1.0);}
+				h3 
+				{
+					color:green;
+				}
+		</style>
+
+
+		<script type="text/javascript">
+		// Esto es un comentario en JavaScript y no hace parte funcional del código //
+		// Repoasar y dar un mejor uso a confirm y alert //
+
+			function accion_1()
+			{
+				alert("Alerta del Botón 1 Hola!!!")
+			}
+
+			function accion_2()
+			{
+				confirm("Confirmación del Botón 2: Chaooooo!!!")
+			}
+
+			function accion_3()
+			{
+				alert("Alerta del Botón 3")
+				confirm("Confirmación del botón 3")
+			}
+
+			function accion_4()
+
+			{
+				var NombreCompleto= document.getElementById('Tx_1').value+" "+
+									document.getElementById('Tx_2').value+" "+ 
+							 		document.getElementById('Tx_3').value+" "+ 
+							 		document.getElementById('Tx_4').value
+
+				var Nombres = document.getElementById('Tx_1').value+" "+document.getElementById('Tx_2').value
+				var Apellidos = document.getElementById('Tx_3').value+" "+document.getElementById('Tx_4').value
+
+
+				alert(NombreCompleto)
+				document.getElementById("Out1").innerHTML = Nombres
+				document.getElementById("Out2").innerHTML = Apellidos
+
+			}
+
+		</script>
+
+
+	</body>
+</html>
+
+
